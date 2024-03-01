@@ -5,10 +5,10 @@
 
 ## CICD Applications setup
 1) ###### GitHub setup
-    Fork GitHub Repository by using the existing repo "devops-fully-automated" (https://github.com/cvamsikrishna11/devops-fully-automated)     
+    Fork GitHub Repository by using the existing repo "devops-automated-project" (https://github.com/pegdwende1/devops-automated-project.git)     
     - Go to GitHub (github.com)
     - Login to your GitHub Account
-    - **Fork repository "devops-fully-automated" (https://github.com/cvamsikrishna11/devops-fully-automated) & name it "devops-fully-automated"**
+    - **Fork repository "devops-fully-automated" (https://github.com/pegdwende1/devops-automated-project.git) & name it "devops-fully-automated"**
     - Clone your newly created repo to your local
 
 2) ###### Jenkins/Maven/Ansible
@@ -17,7 +17,7 @@
     - Security Group (Open): 8080, 9100 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
     - **Attach Jenkins server with IAM role having "AdministratorAccess"**
-    - User data (Copy the following user data): https://github.com/cvamsikrishna11/devops-fully-automated/blob/installations/jenkins-maven-ansible-setup.sh
+    - User data (Copy the following user data): https://github.com/pegdwende1/devops-automated-project/blob/installations/jenkins-maven-ansible-setup.sh
     - Launch Instance
     - After launching this Jenkins server, attach a tag as **Key=Application, value=jenkins**
 
@@ -26,7 +26,7 @@
     - Instance type: t2.medium
     - Security Group (Open): 9000, 9100 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
-    - User data (Copy the following user data): https://github.com/cvamsikrishna11/devops-fully-automated/blob/installations/sonarqube-setup.sh
+    - User data (Copy the following user data): https://github.com/pegdwende1/devops-automated-project/blob/installations/sonarqube-setup.sh
     - Launch Instance
 
 4) ###### Nexus
@@ -34,7 +34,7 @@
     - Instance type: t2.medium
     - Security Group (Open): 8081, 9100 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
-    - User data (Copy the following user data): https://github.com/cvamsikrishna11/devops-fully-automated/blob/installations/nexus-setup.sh
+    - User data (Copy the following user data): https://github.com/pegdwende1/devops-automated-project/blob/installations/nexus-setup.sh
     - Launch Instance
 
 5) ###### EC2 (Dev/Stage/Prod)
@@ -42,7 +42,7 @@
     - Instance type: t2.micro
     - Security Group (Open): 8080, 9100 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
-    - User data (Copy the following user data): https://github.com/cvamsikrishna11/devops-fully-automated/blob/installations/deployment-servers-setup.sh
+    - User data (Copy the following user data): https://github.com/pegdwende1/devops-automated-project/blob/installations/deployment-servers-setup.sh
     - Launch Instance
     - After launching this Jenkins servers, attach a tag as **Key=Environment, value=dev/stage/prod** ( out of 3, each 1 instances could be tagges as one env)
 
@@ -52,7 +52,7 @@
     - Security Group (Open): 9090 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
     - **Attach Jenkins server with IAM role having "AmazonEC2ReadOnlyAccess"**
-    - User data (Copy the following user data): https://github.com/cvamsikrishna11/devops-fully-automated/blob/installations/prometheus-setup.sh
+    - User data (Copy the following user data): https://github.com/pegdwende1/devops-automated-project/blob/installations/prometheus-setup.sh
     - Launch Instance
 
 7) ###### Grafana
@@ -60,7 +60,7 @@
     - Instance type: t2.micro
     - Security Group (Open): 3000 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
-    - User data (Copy the following user data): https://github.com/cvamsikrishna11/devops-fully-automated/blob/installations/grafana-setup.sh
+    - User data (Copy the following user data): https://github.com/pegdwende1/devops-automated-project/blob/installations/grafana-setup.sh
     - Launch Instance
   
 8) ###### Slack workspace invite and configuring the token
