@@ -18,7 +18,7 @@ pipeline {
         stage('Git checkout') {
             steps {                
                 echo 'Cloning the application code...'
-                git branch: 'main', url: 'https://https://github.com/pegdwende1/devops-automated-project.git'
+                git branch: 'main', url: 'https://github.com/pegdwende1/devops-automated-project.git'
             }
         }
 
