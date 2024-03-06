@@ -90,8 +90,8 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'nexus-credentials', passwordVariable: 'PASSWORD', usernameVariable: 'USER_NAME')]) {
                     sh "sed -i \"s/.*<username><\\/username>/<username>$USER_NAME<\\/username>/g\" ${WORKSPACE}/nexus-setup/settings.xml"
                     sh "sed -i \"s/.*<password><\\/password>/<password>$PASSWORD<\\/password>/g\" ${WORKSPACE}/nexus-setup/settings.xml"
-                    sh 'cp ${WORKSPACE}/nexus-setup/settings.xml /var/lib/jenkins/.m2'
-                    sh 'mvn deploy -DskipTests'
+                    sh "cp ${WORKSPACE}/nexus-setup/settings.xml /var/lib/jenkins/.m2"
+                    sh "mvn deploy -DskipTests"
                 }
             }
             post {
